@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { LatLngExpression } from "leaflet";
+import { location } from "./location";
+import Map from "./Map/Map";
+import Search from "./Search/Search";
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 function App() {
+  const [ip, setIp] = useState<string>("");
+  const [location, setLocation] = useState<location<LatLngExpression>>({
+    city: "",
+    country: "",
+    timeZone: "",
+    position: [51.505, -0.09],
+    isp: "",
+  });
+
   return (
-    <div className="App">
-      <MapContainer
-        center={[51.509, -0.08]}
-        zoom={13}
-        scrollWheelZoom={true}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[51.509, -0.08]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
-    </div>
+    <>
+      <Search
+        ip={ip}
+        setIp={setIp}
+        location={location}
+        setLocation={setLocation}
+      />
+      <Map location={location} setLocation={setLocation} />
+    </>
   );
 }
 
