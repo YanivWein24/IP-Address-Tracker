@@ -28,6 +28,10 @@ const Search = ({
       .then((data) => setLocalIp(data));
   };
 
+  const deleteLocalIp = () => {
+    setIp("");
+  };
+
   const locateIp = () => {
     fetch(
       `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`
@@ -35,6 +39,7 @@ const Search = ({
       .then((res) => res.json())
       .then((data) => {
         setLocation({
+          localIp: data.ip,
           city: data.location.city,
           country: data.location.country,
           timeZone: data.location.timezone,
@@ -42,6 +47,7 @@ const Search = ({
           isp: data.isp,
         });
       });
+    deleteLocalIp();
   };
 
   return (
@@ -57,7 +63,7 @@ const Search = ({
           value={ip}
           placeholder="Search for any IP address"
         ></input>
-        <button onClick={locateIp}>
+        <button onClick={() => locateIp()}>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
             <path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6" />
           </svg>
@@ -68,15 +74,9 @@ const Search = ({
           <button onClick={getLocalIp}>What's My IP?</button>
           {localIp !== "" && (
             <p
+              className="fade-in"
               onClick={() => {
                 navigator.clipboard.writeText(localIp);
-                setCopyMessage(true);
-                setTimeout(() => {
-                  setCopyMessage(false);
-                }, 2000);
-              }}
-              onTouchStart={async () => {
-                await navigator.clipboard.writeText(localIp);
                 setCopyMessage(true);
                 setTimeout(() => {
                   setCopyMessage(false);
@@ -85,13 +85,15 @@ const Search = ({
             >
               {localIp}
               <br />
-              <span>Click To Copy</span>
+              <span>(Click To Copy)</span>
             </p>
           )}
-          {copyMessage && <p className="copyMessage">Copied To Clipboard!</p>}
+          {copyMessage && (
+            <p className="copyMessage fade-in">Copied To Clipboard!</p>
+          )}
         </div>
       )}
-      {location.city !== "" && <Info location={location} ip={ip} />}
+      {location.city !== "" && <Info location={location} />}
     </div>
   );
 };

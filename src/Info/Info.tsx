@@ -3,19 +3,13 @@ import "./Info.css";
 import { location } from "../location";
 import { LatLngExpression } from "leaflet";
 
-const Info = ({
-  location,
-  ip,
-}: {
-  location: location<LatLngExpression>;
-  ip: string;
-}) => {
+const Info = ({ location }: { location: location<LatLngExpression> }) => {
   return (
     <div className="info fade-in">
       <div className="infoContainer">
         <div className="column">
           <p>IP ADDRESS</p>
-          <p className="bold">{ip}</p>
+          <p className="bold">{location.localIp}</p>
         </div>
         <div className="column">
           <p>LOCATION</p>

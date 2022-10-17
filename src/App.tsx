@@ -8,6 +8,7 @@ import "./App.css";
 function App() {
   const [ip, setIp] = useState<string>("");
   const [location, setLocation] = useState<location<LatLngExpression>>({
+    localIp: "",
     city: "",
     country: "",
     timeZone: "",
