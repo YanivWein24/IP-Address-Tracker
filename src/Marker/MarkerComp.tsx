@@ -1,8 +1,7 @@
 import React, { useEffect, Dispatch, SetStateAction } from "react";
-import { Marker, useMap, useMapEvents, Popup } from "react-leaflet";
-import { LatLngExpression, Icon, IconOptions } from "leaflet";
+import { Marker, useMap, Popup } from "react-leaflet";
+import { LatLngExpression } from "leaflet";
 import { location } from "../location";
-// import * as LocationIcon  from "../images/icon-location.svg"
 
 const MarkerComp = ({
   setLocation,
@@ -16,23 +15,6 @@ const MarkerComp = ({
   useEffect(() => {
     map.flyTo(location.position, map.getZoom());
   }, [location]);
-
-  //   const map = useMapEvents({
-  //   click() {
-  //     map.locate()
-  //   },
-  //   locationfound(e) {
-  //     console.log(e)
-  //     setLocation({
-  //       city: '',
-  //       country: '',
-  //       timeZone: '',
-  //       position: e.latlng,
-  //       isp: ''
-  //     })
-  //     map.flyTo(e.latlng, map.getZoom())
-  //   },
-  // })
 
   return (
     <div>

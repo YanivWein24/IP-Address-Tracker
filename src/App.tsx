@@ -16,7 +16,7 @@ function App() {
   });
 
   return (
-    <>
+    <div className="app">
       <Search
         ip={ip}
         setIp={setIp}
@@ -24,7 +24,7 @@ function App() {
         setLocation={setLocation}
       />
       <Map location={location} setLocation={setLocation} />
-    </>
+    </div>
   );
 }
 

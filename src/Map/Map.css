@@ -1,4 +1,9 @@
 .leaflet-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 70vh;
+  z-index: 1;
+}
+
+.leaflet-control-zoom .leaflet-bar .leaflet-control {
+  display: none;
 }

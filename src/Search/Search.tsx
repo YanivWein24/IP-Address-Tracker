@@ -1,10 +1,8 @@
 import React, { useState, Dispatch, SetStateAction } from "react";
 import "./Search.css";
+import Info from "../Info/Info";
 import { location } from "../location";
 import { LatLngExpression } from "leaflet";
-import { useMap } from "react-leaflet";
-
-import * as arrowIcon from "../images/icon-arrow.svg";
 
 const Search = ({
   ip,
@@ -48,6 +46,7 @@ const Search = ({
 
   return (
     <div className="search">
+      <img src="../../pattern-bg.png" alt="background"></img>
       <h1>IP Address Tracker</h1>
       <div className="searchContainer">
         <input
@@ -56,7 +55,7 @@ const Search = ({
             event.key === "Enter" && ip !== "" && locateIp()
           }
           value={ip}
-          placeholder="Search for any IP address or domain"
+          placeholder="Search for any IP address"
         ></input>
         <button onClick={locateIp}>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
@@ -64,23 +63,35 @@ const Search = ({
           </svg>
         </button>
       </div>
-      <div className="findMyIp">
-        <button onClick={getLocalIp}>What's My IP?</button>
-        {localIp !== "" && (
-          <p
-            onClick={() => {
-              navigator.clipboard.writeText(localIp);
-              setCopyMessage(true);
-              setTimeout(() => {
-                setCopyMessage(false);
-              }, 2000);
-            }}
-          >
-            {localIp} <span>(Click To Copy)</span>
-          </p>
-        )}
-        {copyMessage && <p className="copyMessage">Copied To Clipboard!</p>}
-      </div>
+      {location.city === "" && (
+        <div className="findMyIp">
+          <button onClick={getLocalIp}>What's My IP?</button>
+          {localIp !== "" && (
+            <p
+              onClick={() => {
+                navigator.clipboard.writeText(localIp);
+                setCopyMessage(true);
+                setTimeout(() => {
+                  setCopyMessage(false);
+                }, 2000);
+              }}
+              onTouchStart={async () => {
+                await navigator.clipboard.writeText(localIp);
+                setCopyMessage(true);
+                setTimeout(() => {
+                  setCopyMessage(false);
+                }, 2000);
+              }}
+            >
+              {localIp}
+              <br />
+              <span>Click To Copy</span>
+            </p>
+          )}
+          {copyMessage && <p className="copyMessage">Copied To Clipboard!</p>}
+        </div>
+      )}
+      {location.city !== "" && <Info location={location} ip={ip} />}
     </div>
   );
 };
