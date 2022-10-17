@@ -7,3 +7,9 @@
 .leaflet-control-zoom .leaflet-bar .leaflet-control {
   display: none;
 }
+
+@media screen and (min-width: 1600px) {
+  .leaflet-container {
+    height: 75vh;
+  }
+}

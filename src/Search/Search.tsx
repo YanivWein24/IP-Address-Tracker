@@ -39,11 +39,11 @@ const Search = ({
       .then((res) => res.json())
       .then((data) => {
         setLocation({
-          localIp: data.ip,
-          city: data.location.city,
-          country: data.location.country,
-          timeZone: data.location.timezone,
-          position: [data.location.lat, data.location.lng],
+          localIp: data.ip || "",
+          city: data.location.city || "",
+          country: data.location.country || "",
+          timeZone: data.location.timezone || "",
+          position: [data.location.lat, data.location.lng] || [51.505, -0.09],
           isp: data.isp,
         });
       });

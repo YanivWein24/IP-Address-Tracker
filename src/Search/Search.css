@@ -1,7 +1,7 @@
 .search {
   position: relative;
   text-align: center;
-  height: 15rem;
+  height: 16rem;
   margin: 0 auto;
   padding-top: 2rem;
 }
@@ -23,18 +23,18 @@
 }
 
 .searchContainer {
-  display: inline-block;
+  display: block;
+  width: 100%;
 }
 
 .searchContainer input {
-  max-width: 60%;
+  width: 60%;
   padding: 1rem;
   border: none;
+  outline: none;
   border-radius: 10px 0 0 10px;
   font-size: 18px;
   background-color: rgb(247, 247, 247);
-  border: none;
-  outline: none;
 }
 
 .searchContainer input::placeholder {
@@ -45,13 +45,13 @@
   padding: 1rem 1.5rem;
   border: none;
   border-radius: 0 10px 10px 0;
-  background-color: var(--color-darker-gray);
+  background-color: black;
   font-size: 18px;
   transition: background-color 0.2s ease-in;
 }
 
 .searchContainer button:active {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-darker-gray);
 }
 
 .searchContainer button:hover {
@@ -60,7 +60,7 @@
 
 .search .findMyIp {
   font-family: "Rubik", sans-serif;
-  margin: 0.5rem auto 0;
+  margin: 0.7rem auto 0;
   background-color: rgba(247, 247, 247, 0.4);
   display: inline-block;
   padding: 1rem;
@@ -100,4 +100,37 @@
 .search .findMyIp .copyMessage {
   color: rgb(247, 247, 247);
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .searchContainer input {
+    width: 40%;
+  }
+
+  .search .findMyIp button:hover {
+    background-color: var(--color-dark-gray);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .search h1 {
+    font-size: 28px;
+  }
+
+  .searchContainer input {
+    width: 30%;
+  }
+
+  .searchContainer button:hover {
+    background-color: var(--color-darker-gray);
+  }
+
+  .search .findMyIp {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .search .findMyIp {
+    width: 10%;
+  }
 }
