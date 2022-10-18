@@ -6,7 +6,7 @@ alt="My Project GIF" width="600" height="323">
 
 A tracking app that locates users by their IP address.<br />
 Can locate any given valid IPv4 address on the globe! <br />
-**Using 3 different APIs** - to find the local IP (optional), track its location, and presume it on a live map! <br />
+**Using 3 different APIs** - to find the local IP (optional), track its location, and display it on a live map! <br />
 Responsive and well-suited for mobile, tablets, and desktop screens.
 
 ## Where can i check this out?
@@ -19,8 +19,11 @@ Right Here: https://react-app-ip-tracker.netlify.app/
 - Track the location of any IPv4 address on the globe!
 - Find your own IPv4 address and copy it to clipboard with ease.
 - Move around and explore the map, generated and updated by - 'Leaflet'.
+  <br />
 
-<br />
+## Lighthouse Score:
+
+<img src="https://user-images.githubusercontent.com/97472180/196472355-235a2480-7b7e-4618-812e-51c471637543.PNG " height="180" width="500" alt="HomeScreen-light"/>
 
 ## Screenshots:
 

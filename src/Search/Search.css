@@ -69,7 +69,7 @@
 .search .findMyIp p {
   font-weight: 700;
   margin: 0.3rem auto 0;
-  color: var(--color-darker-gray);
+  color: black;
 }
 
 .search .findMyIp button {

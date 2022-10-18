@@ -19,7 +19,7 @@ const Map = ({
         className="leaflet-container"
         zoom={15}
         scrollWheelZoom={true}
-        zoomControl={window.innerWidth <= 1024 ? false : true}
+        zoomControl={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
