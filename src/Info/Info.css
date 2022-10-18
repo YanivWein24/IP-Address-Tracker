@@ -25,7 +25,6 @@
 }
 
 .info p {
-  font-family: "Rubik", sans-serif;
   color: var(--color-dark-gray);
   font-weight: 500;
   font-size: 12px;
@@ -41,7 +40,7 @@
 
 @media screen and (min-width: 768px) {
   .info {
-    top: 73%;
+    top: 74%;
   }
 
   .info .infoContainer {
@@ -68,5 +67,15 @@
 @media screen and (min-width: 1200px) {
   .info .infoContainer {
     width: 60%;
+  }
+
+  .info .infoContainer p.bold {
+    margin: 0.5rem auto 0;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .info .infoContainer {
+    padding: 1.5rem 0;
   }
 }

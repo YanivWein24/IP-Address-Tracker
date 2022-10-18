@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# IP Address Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img align="center" src="https://user-images.githubusercontent.com/97472180/196443648-30870f0c-fe51-4971-949a-6458f873f54f.gif"
+alt="My Project GIF" width="600" height="323">  
+<br>
 
-## Available Scripts
+A tracking app that locates users by their IP address.<br />
+Can locate any given valid IPv4 address on the globe! <br />
+**Using 3 different APIs** - to find the local IP (optional), track its location, and presume it on a live map! <br />
+Responsive and well-suited for mobile, tablets, and desktop screens.
 
-In the project directory, you can run:
+## Where can i check this out?
 
-### `npm start`
+Right Here: https://react-app-ip-tracker.netlify.app/
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Track the location of any IPv4 address on the globe!
+- Find your own IPv4 address and copy it to clipboard with ease.
+- Move around and explore the map, generated and updated by - 'Leaflet'.
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots:
 
-### `npm run build`
+<p align="center">
+<table>
+<tr>
+<td>Initial Screen</td>
+<td>Searching For IP Location</td>
+</tr>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/97472180/196441374-09abfd78-c2d8-4144-8d4a-1e0bca7322fa.PNG" height="300" width="400" alt="EmptyUserScreen" ></td>
+<td><img src="https://user-images.githubusercontent.com/97472180/196292214-c8257b3b-afb8-4a9a-8bfc-4387342e059e.PNG" height="300" width="400" alt="UserScreen">  </td>
+</tr>
+</table>
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### On Mobile:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="center">
+<table>
+  <tr>
+     <td>Initial Screen</td>
+    <td>Searching For IP Location</td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/97472180/196441004-d5c792e7-8eae-49db-a57e-5d075bccad00.PNG" width=300 height=600></td>
+    <td><img src="https://user-images.githubusercontent.com/97472180/196293434-df295ada-a015-4003-ab0a-5bc1dd7db692.PNG" width=300 height=600></td>
+  </tr>
+ </table>
+</p>

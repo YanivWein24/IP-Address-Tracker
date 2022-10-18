@@ -10,11 +10,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 :root {
   --color-darker-gray: hsl(0, 0%, 17%);
   --color-dark-gray: hsl(0, 0%, 59%);
